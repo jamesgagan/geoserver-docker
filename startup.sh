@@ -21,8 +21,6 @@ if [ "${ROOT_WEBAPP_REDIRECT}" = "true" ]; then
 EOF
 fi
 
-chmod -R 777 $GEOSERVER_DATA_DIR
-
 ## install release data directory if needed before starting tomcat
 if [ ! -z "$GEOSERVER_REQUIRE_FILE" ] && [ ! -f "$GEOSERVER_REQUIRE_FILE" ]; then
   echo "Initialize $GEOSERVER_DATA_DIR from data directory included in geoserver.war"
